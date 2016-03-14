@@ -430,8 +430,7 @@
                             }
 
                         });
-                        //runTabifier($('#divBodyWrapper').find('#layoutBuilderDOM').html(), 'HTML', $('#divBodyWrapper').find('#txtlayoutBuilderDOM'));
-                        alert(typeof ($('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM')));
+                        //runTabifier($('#divBodyWrapper').find('#layoutBuilderDOM').html(), 'HTML', $('#divBodyWrapper').find('#txtlayoutBuilderDOM'));                        
                         if ($('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM').length > 0 && typeof ($('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM')) != "undefined") {
                             runTabifier($divBodyWrapper.html(), 'HTML', $('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM'));
                         }
@@ -1532,37 +1531,43 @@
                 });
                 $('#divBodyWrapper').find('#layoutBuilder').find('div').each(function () {
                     $this = $(this);
-                    $this.prepend(actionOptions);
-                    ModernLayoutManager.showHideSaveButton();
-                    ModernLayoutManager.BindEventOptions();
-                    ModernLayoutManager.MouseOverEffect();
-                    ModernLayoutManager.ResizeableCol();
-                    var classes = $this.attr('class');
-                    var pattern = new RegExp(/sfCol_[0-9]+/);
-                    var isMatched = classes.match(pattern);
-                    var width = 100;
-                    containerID++;
-                    if (isMatched == null) {
-                        $this.addClass('freeContainer');
-                        $this.find('#elemSelect').remove();
+                    var ID = $this.attr('id');
+                    if (typeof (ID) != "undefined") {
+                        $this.prepend(actionOptions);
+                        ModernLayoutManager.showHideSaveButton();
+                        ModernLayoutManager.BindEventOptions();
+                        ModernLayoutManager.MouseOverEffect();
+                        ModernLayoutManager.ResizeableCol();
+                        var classes = $this.attr('class');
+                        var pattern = new RegExp(/sfCol_[0-9]+/);
+                        var isMatched = classes.match(pattern);
+                        var width = 100;
+                        containerID++;
+                        if (isMatched == null) {
+                            $this.addClass('freeContainer');
+                            $this.find('#elemSelect').remove();
+                        }
+                        else {
+                            width = isMatched[0].replace('sfCol_', '');
+                        }
+                        $this.attr('data-id', containerID);
+                        $this.attr('data-con', width);
+                        dataDetail = {};
+                        dataDetail.ID = $this.attr('id');
+                        dataDetail.divClass = $this.attr('class').replace(isMatched, '').replace('col', '').replace('container', '').replace('freeContainer', '').replace('ui-resizable', '');
+                        $this.removeClass(dataDetail.divClass);
+                        dataDetail.dataID = containerID;
+                        dataDetail.name = $this.attr('id');
+                        dataDetail.width = width;
+                        dataDetail.style = $this.attr('style');
+                        $this.removeAttr('style');
+                        $this.find(' > .options').find('.elementSelect').removeClass('disabled');
+                        //widthClass = classes.replace('sfCol_' + width, 'sfCol_' + newWidth);
+                        DOMelement.push(dataDetail);
                     }
                     else {
-                        width = isMatched[0].replace('sfCol_', '');
+                        $this.remove();
                     }
-                    $this.attr('data-id', containerID);
-                    $this.attr('data-con', width);
-                    dataDetail = {};
-                    dataDetail.ID = $this.attr('id');
-                    dataDetail.divClass = $this.attr('class').replace(isMatched, '').replace('col', '').replace('container', '').replace('freeContainer', '').replace('ui-resizable', '');
-                    $this.removeClass(dataDetail.divClass);
-                    dataDetail.dataID = containerID;
-                    dataDetail.name = $this.attr('id');
-                    dataDetail.width = width;
-                    dataDetail.style = $this.attr('style');
-                    $this.removeAttr('style');
-                    $this.find(' > .options').find('.elementSelect').removeClass('disabled');
-                    //widthClass = classes.replace('sfCol_' + width, 'sfCol_' + newWidth);
-                    DOMelement.push(dataDetail);
                 });
             },
             calculateDOM: function () {
