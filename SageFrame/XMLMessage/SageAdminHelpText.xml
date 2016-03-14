@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Paage name must be in small letters.-->
+<SageFrameAminHelp>
+  <admin>
+    <Welcome-Panel>
+      <![CDATA[
+     In this section, you will find links to Sageframe quick tour, getting started with the product, tutorials and list of available modules.
+      <br />
+      <b>The Admin Interface: </b>
+      Take a tour to get familiar with the admin interface.
+      <br />
+      <b>The site building: </b>
+      Take this tour to see how easily you can build your site.
+      <br />
+      <b>Sageframe Tutorials: </b>
+      Look out for the document library and more tutorials to create the modules on Sageframe.
+      <br />
+      <b>Sageframe Module List: </b>
+      Get with the existing lists of modules to pick out the best one for your site.
+    ]]>
+    </Welcome-Panel>
+    <C-Panel>C-Panel helps provide a graphical interface and automation tools designed to simplify the website hosting process. Administrators with the help of C-Panel can take the control over various aspects of website and server administration through a standard web browser. Once installed, it can't be easily removed. Therefore, the server must be formatted, and the operating system reinstalled. Similarly, it should only be installed on a freshly installed operating system with minimal prior configuration.  </C-Panel>
+    <Site-Analytics>Site analytics enables you to evaluate the measurement, collection, analysis and reporting of your webpage's internet data understanding and optimizing the overall web usage. Not just a tool for measuring web traffic, it can moreover be used as a tool for business and market research to assess and improve the effectiveness of your website. Gauging the traffic and popularity trends, it also provides information about the number of visitors along with the page views of your website. Such an analysis of your site in terms of date, country, browser and page can either be obtained from charts or the direct factual data too. </Site-Analytics>
+    <Portal-Snapshot>Your Portal Snapshot provides you with each and every information regarding your general portal, pages, modules and users. From portal name, page count, total number of users to sitemap, layout, support, features, online users and so forth; it keeps you updated with all those information at a single time.</Portal-Snapshot>
+    <To-Do-List>
+      <![CDATA[
+        To-Do List is an amazing feature that Sageframe has for busy people. You can add a reminder to notify at the right time with To-Do List.
+      <ul>
+        <li> From the search button on its top, you can select a specific date to find the records of that day. </li>
+        <li> With the Add button on its top right, you can add a task with a date to remind you on the specified time.</li>
+        <li> Similarly, with the options Previous, Today and Upcoming, you can have the previous records, records of today and upcoming events respectively.</li>
+        <li> Not just this, with the option All, you can view all of your records at the same time.</li>
+      </ul>
+    ]]>
+    </To-Do-List>
+  </admin>
+
+  <default>
+    <AdminHelp>asdf</AdminHelp>
+    <AdminHelps>asdf</AdminHelps>
+    <AdminHelped>asdfadsf</AdminHelped>
+  </default>
+
+  <modules>
+    <![CDATA[
+    Add modules to a template based wireframe of the pages.
+    <ul>
+      <li><b>Install Module: </b>It lets you install a new module from your local file system as an extension package in your website.</li>
+      <li><b>Create New Module: </b>Creating more advanced settings for module controls, you get to build up a totally new module with Create New Module.</li>
+      <li><b>Create Composite Module: </b>Create Composite Module helps create a compound module by configuring the package information with the extensions.</li>
+      <li><b>Create Package: </b>You get to build up a whole package by configuring the information like module name, license, release notes, URL, compatible versions, cache time and so on.</li>
+     </ul>
+    ]]>
+  </modules>
+
+  <portals>The Portal enables the creation of new child portals and editing the existing ones in your site. Web Portals provide a way for enterprises to provide a consistent look and feel with access control and procedures for multiple applications and databases, which otherwise would have been different entities altogether. The administrators and super users can manage multiple portals at one time. </portals>
+
+  <users>
+    <![CDATA[
+        Allows to manage users: create new users, edit roles, delete users, update user profile info and change password.
+    <ul>
+     <li><b>Add User: </b>It lets you create a new user and assign the role by filling up a small form. </li>
+     <li><b>Delete Selected User: </b>It lets you select the users to delete them from your site. </li>
+     <li><b>Update changes: </b>Whenever you make a change by managing the users, make sure you update those changes as they might not work until you update them. </li>
+     <li><b>User Settings: </b>It allows you to enable a duplicate email and support captcha for user registration. </li>
+    </ul>
+     ]]>
+  </users>
+
+  <roles>
+    <![CDATA[
+     
+          Enables you to create new roles and edit them. The four roles however by default cannot be edited.
+        <ul>
+          <li><b>Super User: </b>Super User is a special user account used for system administration.</li>
+          <li><b>Anonymous User: </b>Anonymous users can't edit their own user pages until a logged-in user begins it. They can't log in, sign up or start their own user page themselves.</li>        
+          <li><b>Site Admin: </b>Site Admin is a person who is responsible for the upkeep, configuration, and reliable operation of the entire website.</li>
+          <li><b>Registered User:  </b>A registered user is one who uses a program or a website and provides his/her credentials, effectively proving his/her identity.</li>
+      </ul>
+     ]]>
+  </roles>
+
+  <pages>
+    <![CDATA[
+    Page Manager provides you with the control to create or manage pages for the site. 
+    Creating and handling pages like home, search result, support, layout, contact sitemap, discover and many more; 
+    you can as well manage the logo, navigation, banner, HTML, design, extension and copyright with Page Manager.
+<br />
+    <b>Create Page: </b> Through Create Page you can build up both Portal Pages and Admin Pages. 
+    Creating Portal Pages lets you play with logo, navigation, banner, lefta, footer content, 
+    footer menu, contact, copyright, etc. whereas Admin Pages deals with message, navigation, toppane, c-panel and so on.
+    ]]>
+  </pages>
+
+  <menu>
+    Menu helps you add, manage and remove the multiple menus of different types. From main menu as a default menu to Footer Menu, Side Menu, Footer Community, Footer Resources, Blue Drops Top Menu, Blue Drops Footer Menu, Furniture Top Menu and Furniture Footer Menu; you can assign pages, external links and html content as menu items to all of them. Similarly, those menu items can also be managed with regards to home, discover, layout, support and contact as well.
+  </menu>
+
+  <page-modules></page-modules>
+
+  <templates>Template Manager allows you to install or create new templates, layouts and assign those across pages to edit the template related files directly. With this, you can view the demo at first to make sure whether you want to activate that specific template or not. If it is that you want to make some changes by customizing the template or editing its files, you can even do that with Template Manager.   </templates>
+
+  <sql>
+    Creates queries and other SQL scripts to execute them against SQL Server database. Without going to the backend, SQL queries can be entered individually or as a file which will then be executed. Besides, you can upload big files as SQL Query and have them 'Run as a script' to make changes, or to access the system without going through the inside details of software coding.
+  </sql>
+
+  <lists>
+    <![CDATA[
+    
+    The List is a powerful module that enables administrator to maintain records which are in the form of a list which can be reused later.
+     <ul>
+    <li><b>Add New List: </b>A new list can be created by filling the required details like List Name, Parent List, Parent Entry, Entry Text and Entry Value.</li>
+    <li><b>Add List Item: </b>A new list item can be added by filling the details of Entry Text and Entry Value.</li>
+    <li><b>Delete Country List: </b>The existing list can be deleted when no longer in use.</li>
+     </ul>
+     ]]>
+  </lists>
+
+  <links>The Links module helps you to easily manage the dashboard by addition of frequently visited pages and modules to the side bar. The quick links and side bar helps you to get to those pages quickly. You can individually add the required sidebar tab as well as sidebar item and also remove them according to your requirement.</links>
+
+  <event-log>Logs the details of each and every events that occurred in the site. Select the type as per the area you are concerned about and you will have a list of logs that includes detailed information along with portal names and client IP addresses. Additionally, you get the feasibility of reporting exceptions through emails. It aids in tracking and solving issues, if any, during the runtime.</event-log>
+
+  <system-event-startup>Sets events that you want to run during your webpage start. You simply add the event you want started and the event is carried out automatically every time your webpage starts. All you need to do is specify the Control URL, the location and activate the event. If you want any event changed or deleted, you also have the 'Edit' and 'Delete' functionalities right here!</system-event-startup>
+
+  <cache-maintenance>Helps set the cache priorities and performs cache maintenance. Also clears the cache memory to flush out useless data stored on server cache. Here, you can "Enable Cache" or 'Clear Cache" to locations that you choose. From a range of locations provided, check on any or all to have cache enabled or cleared and have the command implemented to your SageFrame site.</cache-maintenance>
+
+  <scheduler>Schedules tasks to be run on the exact time that has been previously defined. Here, you can add tasks and assign the time when the tasks are supposed to run. This way, you are saved from the hassle of repeated works, instead you can schedule tasks beforehand and have them run automatically.</scheduler>
+
+  <message-template>Provides fundamental facilities for managing the generation of auto generated emails, message-boards and their messages. It is an informational piece displayed at the top of the page whenever you make any changes or updated. It helps the website communicate with users. Here you can add new message templates, edit the ones already available, activate them and delete the ones that are now rendered void.</message-template>
+
+  <module-message>
+    An information bar that appears when a new page is opened.
+
+    o Module Message Manager: With an info about your current module, Module Message Manager allows you to manage the display mode, culture, message position and type by notifying if its active or not.
+  </module-message>
+
+  <files>The Files module enables administrator/superuser to work with the files and folders on the site. There are options for adding or deleting a file, adding or deleting a folder, copy and moving the files. The files manager allows user interface to work on files and folders located in various templates, modules and systems.</files>
+
+  <seo>
+    <![CDATA[
+    The SEO module lets you generate Google Analytics, Sitemap and Robots automatically and submit to major search engines such as Google, Yahoo, MSN and Bing at the same time.
+    <ul>
+     <li><b>Google Analytics: </b>It is a service which generates a detail statistics about the visitors to a website.</li>
+     <li><b>Sitemap: </b>Sitemap is a list of pages in a website that is accessible to crawlers or users.</li>
+     <li><b>Robots: </b>Robots are a list of pages in the site that indicates the search engine crawler to crawl or not to crawl on the pages of your site.</li>
+    </ul>
+     ]]>
+  </seo>
+
+  <localization>Sets language to match your location and preference. The system default is set to English whereas you can install new language packs and enable or disable them as per your requirement. Here you get to create new language pack, edit time zone, localize your menu and localize module titles to suit your language preference as well. </localization>
+
+  <portal-settings></portal-settings>
+
+  <settings>
+    <![CDATA[
+    The Settings module enables site administrator to configure settings from basic, advanced to superuser settings for the site.
+    <ul>
+      <li>The Basic Setting includes Site Details, Site Marketing, Appearance, Optimization and OpenID Service Provider.</li>
+     <li>The Advanced Setting includes Security Settings, Page Management, Message Settings and Other Settings.</li>
+   <li>The Superuser Setting includes Configuration, Super User Details, SMTP Server Settings and Other Settings.</li>
+   </ul>
+      ]]>
+  </settings>
+
+  <cdn>Enables you to add JS and CSS URL contributing to high availability and performance of the site. This feature, as employed by SageFrame optimizes the speed with which the content is delivered to end users. It is here that you can submit links and edit or delete them as per your requirement.</cdn>
+
+  <site-analytics>Site analytics enables you to evaluate the measurement, collection, analysis and reporting of your webpage's internet data understanding and optimizing the overall web usage. Not just a tool for measuring web traffic, it can moreover be used as a tool for business and market research to assess and improve the effectiveness of your website. Gauging the traffic and popularity trends, it also provides information about the number of visitors along with the page views of your website. Such an analysis of your site in terms of date, country, browser and page can either be obtained from charts or the direct factual data too. </site-analytics>
+
+  <ctl_moduleinstaller.ascx></ctl_moduleinstaller.ascx>
+
+  <editmoduledefinition.ascx></editmoduledefinition.ascx>
+
+  <template-file-editor>Edit template files.</template-file-editor>
+
+  <sfupgrader>
+   
+    <![CDATA[
+             Enables you to upgrade your system. <br />
+             
+             Note: During upgrading manually down and up the site.
+    ]]>
+
+  </sfupgrader>
+  <paymentsetting>
+    Payment gateway setting is the management where we can manage all the settings of n numbers of payment gateway service provider reducing the time and effort to maintain the setting table.
+  </paymentsetting>
+  <module-maker>
+    Module maker helps  to generate a module in sageframe including the 3-tier basic logic, MSSQL storeprocedre and  registering control. Also developer can generarate needed 3-tier logic file  and  store procedure as zip nd download it.
+  </module-maker>
+</SageFrameAminHelp>

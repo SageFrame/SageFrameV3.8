@@ -1,0 +1,37 @@
+﻿/* Pagination */
+
+.sfPagination {
+	margin: 20px 0;
+}
+.sfPagination ul {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+.sfPagination ul > li {
+	display: inline;
+}
+.sfPagination ul > li > a, .sfPagination ul > li > span {
+	float: left;
+	padding: 4px 12px;
+	line-height: 20px;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	border-left-width: 0;
+}
+.sfPagination ul > li > a:hover, .sfPagination ul > li > a:focus, .sfPagination ul > .sfActive > a, .sfPagination ul > .sfActive > span {
+	background-color: #f5f5f5;
+}
+.sfPagination ul > .sfActive > a, .sfPagination ul > .sfActive > span {
+	color: #999999;
+	cursor: default;
+}
+.sfPagination ul > .sfDisabled > span, .sfPagination ul > .sfDisabled > a, .sfPagination ul > .sfDisabled > a:hover, .sfPagination ul > .sfDisabled > a:focus {
+	color: #999999;
+	cursor: default;
+	background-color: transparent;
+}
+.sfPagination ul > li:first-child > a, .sfPagination ul > li:first-child > span {
+	border-left-width: 1px;
+}

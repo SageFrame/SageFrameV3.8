@@ -1,0 +1,262 @@
+
+
+/* Responsive iFrame */
+.sfFlexVideo
+{
+    padding-bottom: 56.25%;
+    position: relative;
+}
+.sfFlexVideo iframe, .sfFlexVideo object, .sfFlexVideo embed
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+#sfResponsiveNavBtn
+{
+    display: none;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+
+
+
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .sfInnerwrapper
+    {
+        width: 96%;
+    }
+    .sfInnerwrapper .sfMoreblocks, .sfInnerwrapper .sfMoreblocks .sfColswrap
+    {
+        margin: 0;
+    }
+    .sfStickySidebar  { display: none;}
+
+    #sfMainWrapper.sfCol_75 { width:100%;}
+}
+
+
+@media only screen and (max-width:960px) {
+
+    .bx-controls, .sf-sub-indicator
+    {
+        display: none;
+    }
+
+    #sfSlider .sfContent h1
+    {
+        font-size: 26px;
+    }
+    #sfSlider p
+    {
+        font-size: 18px;
+    }
+}
+
+
+@media only screen and (max-width:768px) {
+
+    .sfTopbar { height:90px;}
+    .sfLoggedTopBar { margin-top: 90px;}
+    .sfTopbar ul.left, .sfTopbar ul.left li img, .sfTopbar ul.left li a, .sfTopbar ul.left li span { float: none; overflow: hidden;}
+
+.sfTopbar ul.right li { border-left: none;}
+
+    body { }
+    body {  transition: all 0.3s ease-in-out;}
+    [class*="sfCol_"], .sfFixed[class*="sfCol_"]
+    {
+        width: 100%;
+        padding-left: 0;padding-right: 0;
+        float: none;
+    }
+    #sfLoginstatus { display: none;}
+    #sfHeaders { padding: 0;}
+    #sfHeaders [class*='sfCol_'] { width:50%; float: left; margin:40px 0;}
+
+ 
+
+  /* Responsive Menu */
+
+#sfResponsiveNavBtn
+{
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    padding:10px 35px 16px 0px; 
+    z-index: 88;
+}
+
+
+#sfResponsiveNavBtn span, #sfResponsiveNavBtn span:before, #sfResponsiveNavBtn span:after {
+  cursor: pointer;
+  border-radius: 1px;
+  height: 2px;
+  width: 35px;
+  background: #aaa;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#sfResponsiveNavBtn span:before {
+  top: -10px; 
+}
+#sfResponsiveNavBtn span:after {
+  bottom: -10px;
+}
+
+#sfResponsiveNavBtn span, #sfResponsiveNavBtn span:before, #sfResponsiveNavBtn span:after {
+  transition: all 500ms ease-in-out;
+}
+#sfResponsiveNavBtn.active span {
+  background-color: transparent;
+}
+#sfResponsiveNavBtn.active span:before, #sfResponsiveNavBtn.active span:after {
+  top: 0;
+}
+#sfResponsiveNavBtn.active span:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#sfResponsiveNavBtn.active span:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+.sf-menu > li:first-child { margin-top: 30px;}
+.sf-menu > li > a { padding:15px; }
+.sfNavigation li.sfActive > a { border-bottom: none;}
+
+
+    .sf-menu li.sfParent > ul
+    {
+        position: relative;
+        border: none;
+        box-shadow: none;
+        display: block !important;
+        visibility: visible !important;
+        padding-left: 15px;
+    }
+    .sf-menu li, .sfDropdown
+    {
+        float: none;
+    }
+    .sfDropdown ul, .sfDropdown ul ul
+    {
+        position: relative;
+        top: 0;
+        left: 0 !important;
+        background: none;
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+    .sf-menu li.sfParent li.sfParent ul { position:relative;}
+    #sfResponsiveNavBtn
+    {
+        display: block;
+    }
+
+ .offCanvas {
+  overflow: hidden;
+  position: relative;
+  -webkit-transform: translateX(-80%);
+  -ms-transform: translateX(-80%);
+  -o-transform: translateX(-80%);
+  transform: translateX(-80%);}
+
+    .sfNavigation { overflow: hidden; min-height: 24px; position: relative;}
+
+    .offCanvas .sfNavigation { overflow: visible;}
+
+
+   #sfResponsiveNavBtn + .sf-menu {
+    position:absolute;
+    top: -40px;
+    left:100%;
+    background: #d4d4d4;
+    width: 80vw;
+    height: 100vh;
+    z-index: 999;
+    overflow: auto;
+    box-shadow: inset 5px 0 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;}
+
+
+
+    .sfStickySidebar
+    {
+        display: none;
+    }
+
+    .sfBlockResponsive
+    {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        border: 1px solid #dddddd;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        -webkit-overflow-scrolling: touch;
+    }
+    .sfBlockResponsive > .sfTable
+    {
+        margin-bottom: 0;
+    }
+    .sfBlockResponsive > .sfTable > thead > tr > th, .sfBlockResponsive > .sfTable > tbody > tr > th, .sfBlockResponsive > .sfTable > tfoot > tr > th, .sfBlockResponsive > .sfTable > thead > tr > td, .sfBlockResponsive > .sfTable > tbody > tr > td, .sfBlockResponsive > .sfTable > tfoot > tr > td
+    {
+        white-space: nowrap;
+    }
+    .social li
+    {
+        width: 100%;
+    }
+    .sfStickySidebar, .sfNavigation li.sfActive a:after
+    {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 640px) {
+    
+    #sfSlider .sfContent h1
+    {
+        font-size: 20px;
+    }
+    #sfSlider p
+    {
+        font-size: 16px;
+    }
+
+     .sfInnerBanner h1 { font-size: 24px;}
+
+}
+
+
+@media only screen and (max-width:480px) {
+    .solution span[class*="icon-"]
+    {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+

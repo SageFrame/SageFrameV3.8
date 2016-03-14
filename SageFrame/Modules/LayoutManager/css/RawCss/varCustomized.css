@@ -1,0 +1,125 @@
+﻿body {
+    background-color:$body_bg;
+    color:$text_color;
+    font-size:$font_size_base;
+    line-height:$line_height_base;
+    text-align: $text_align;
+    font-family: $body_font_family;
+}
+p{
+    color:$text_color;
+    font-size:$font_size_base;
+    line-height:$line_height_base;
+    text-align: $text_align;
+    font-family: $body_font_family;
+}
+a {
+    color: $link_color ;
+    text-align: $text_align;
+}
+a:hover {
+    color:$link_hover_colr;
+    text-decoration:$link_hover_decoration ;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: $heading_font_family;
+}
+h1 {
+    font-size: $font_size_h1;
+    color:$font_color_h1;
+    text-align: $text_align;
+}
+h2 {
+    font-size: $font_size_h2;
+    color:$font_color_h2;
+    text-align: $text_align;
+}
+h3 {
+    font-size: $font_size_h3;
+    color:$font_color_h3;
+    text-align: $text_align;
+}
+h4 {
+    font-size: $font_size_h4;
+    color:$font_color_h4;
+    text-align: $text_align;
+}
+h5 {
+    font-size: $font_size_h5;
+    color:$font_color_h5;
+    text-align: $text_align;
+}
+h6 {
+    font-size: $font_size_h6;
+    color:$font_color_h6;
+    text-align: $text_align;
+}
+/*Buttons*/
+.sfSuccessBtn {
+  color: $white;
+  background-color: $successColor;
+  text-align: $text_align;
+}
+.sfSuccessBtn:hover,
+.sfSuccessBtn:focus,
+.sfSuccessBtn:active,
+.sfSuccessBtn.active {
+    background-color: $successColor-hv;
+}
+
+.sfInfoBtn {
+  color: $white;
+  background-color: $infoColor;
+}
+.sfInfoBtn:hover,
+.sfInfoBtn:focus,
+.sfInfoBtn:active,
+.sfInfoBtn.active {
+    background-color: $infoColor-hv;
+}
+
+.sfWarningBtn {
+  color: $white;
+  background-color: $warningColor;
+}
+.sfWarningBtn:hover,
+.sfWarningBtn:focus,
+.sfWarningBtn:active,
+.sfWarningBtn.active {
+    background-color: $$warningColor-hv;
+}
+
+.sfDangerBtn {
+  color: $white;
+  background-color: $dangerColor;
+}
+.sfDangerBtn:hover,
+.sfDangerBtn:focus,
+.sfDangerBtn:active,
+.sfDangerBtn.active {
+    background-color: $dangerColor-hv;
+}
+
+.sfPrimaryBtn {
+  color: $white;
+  background-color: $primaryColor;
+}
+.sfPrimaryBtn:hover,
+.sfPrimaryBtn:focus,
+.sfPrimaryBtn:active,
+.sfPrimaryBtn.active {
+    background-color: $primaryColor-hv;
+}
+
+.sfSecondaryBtn {
+  color: $white;
+  background-color: $secondaryColor;
+}
+.sfSecondaryBtn:hover,
+.sfSecondaryBtn:focus,
+.sfSecondaryBtn:active,
+.sfSecondaryBtn.active {
+    background-color: $secondaryColor-hv;
+}
+
+

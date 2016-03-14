@@ -1,0 +1,10 @@
+﻿/* Navigation */
+.sf-menu { float:right;}
+.sfNavigation, .sfNavigation li.sfActive a { background:none;}
+.sfNavigation > ul > li > a { border-bottom: 1px solid transparent;}
+.sfNavigation li.sfActive > a { border-bottom:1px solid #797979; position:relative;}
+.sfNavigation li.sfActive > a:after { position: absolute; width:100%; height:1px; content: ""; display: inline-block; left:0; background:#bcbcbc;
+top:100%; margin-top: -3px;}
+.sf-menu a { font-size:16px; text-transform: capitalize; }
+.sf-menu > li > a { padding-left:0; padding-right:0; }
+.sf-menu > li { padding:0 20px;}

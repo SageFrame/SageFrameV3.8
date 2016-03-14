@@ -1,0 +1,31 @@
+﻿/* Table Layout */
+table {
+	max-width: 100%;
+	background-color: transparent;
+	width: 100%;
+	margin-bottom: 20px;
+}
+th {
+	text-align: left;
+}
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+	padding: 8px;
+	line-height: 1.4;
+	vertical-align: top;
+	border-bottom: 1px solid #dddddd;
+}
+table > thead > tr > th, table > thead > tr > td {
+	vertical-align: bottom;
+	border-bottom: 2px solid #dddddd;
+}
+table > caption + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th, table > thead:first-child > tr:first-child > th, table > caption + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td, table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #dddddd;
+}
+table table {
+	background-color: #ffffff;
+}
+
+table.sfTableStriped  tr:nth-child(2n+1) td { background-color:#f7f7f7;}

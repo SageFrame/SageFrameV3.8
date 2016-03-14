@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PaypalExample.ascx.cs" Inherits="Modules_PayPalExample_PaypalExample" %>
+<asp:Button runat="server" ID="btnPaypalCheck" Text="Paypal check" OnClick="btnPaypalCheck_Click" />
