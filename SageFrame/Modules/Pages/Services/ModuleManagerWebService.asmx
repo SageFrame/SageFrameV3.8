@@ -546,6 +546,7 @@ public class ModuleManagerWebService : SageFrame.Services.AuthenticateService
             lstXmlTags = parser.GetXmlTags(filePath, "layout/section");
             ModulePaneGenerator wg = new ModulePaneGenerator();
             layout = wg.GenerateHTML(lstXmlTags, lstXmlTags, 1);
+            layout = "False,,,," + layout;
         }
         return layout;
     }

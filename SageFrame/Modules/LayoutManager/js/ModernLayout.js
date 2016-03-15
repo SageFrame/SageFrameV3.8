@@ -255,10 +255,10 @@
                     //}
                 });
                 $('#divBodyWrapper').find('#cancelTemplateList').off().on('click', function () {
+                    $('#divBodyWrapper').find('.layout_wrapper').removeClass('margintop0');
                     $('#divBodyWrapper').find('.templateList_wrapper').slideUp(500, function () {
                         $('#divBodyWrapper').find('.templateList_wrapper').removeClass('active');
-                        $('#divBodyWrapper').find('.layout_property').css({ position: 'fixed' }).removeClass('margintop0');
-                        $('#divBodyWrapper').find('.layout_wrapper').removeClass('margintop0');
+                        $('#divBodyWrapper').find('.layout_property').css({ position: 'fixed' }).removeClass('margintop0');                        
                         $('#divBodyWrapper').find('.layout_wrapper').find('.layout_action > ul').css({ 'position': 'fixed' }).addClass('fixed');;
                         $('#divBodyWrapper').find('.layoutBuilder_wrapper').addClass("margintop0");
                     });
