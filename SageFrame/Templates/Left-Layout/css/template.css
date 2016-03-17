@@ -1423,7 +1423,7 @@ h3.sfMediaHeading {
     padding:100px 0 0;overflow: hidden;background: #3a3a3a none repeat scroll 0 0;border-right: 5px solid rgba(0, 0, 0, 0.2);box-shadow: 0 0 5px #000;height: 100vh;left: 0;top: 0;width: 250px;z-index: 999;margin-left:0;
     position: fixed;
     opacity: $opacity;
-	z-index:1;
+	z-index:100;
     
    
 }
@@ -1439,8 +1439,7 @@ h3.sfMediaHeading {
 .sfLogininfo li { list-style:none; float:left; }
 a:focus { outline:none;}
 .sfLoggedTopBar { margin-top:45px;}
-.sfLogininfo {text-align: center;float:left;}
-.sfLogininfo ul {display: inline-block;}
+.sfLogininfo ul { float: right;margin-right:50px;}
 .sfLogininfo ul li {float: left;}
 .sfLogininfo ul li:first-child { border-right:1px solid #52bee6; margin-right: 0;}
 .sfLogininfo ul li a { display: inline-block; color:#fff;}
@@ -2184,25 +2183,322 @@ a.icon-edit:before, .sfTopbar [class^="icon-"]:before, .sfTopbar [class*=" icon-
     font-size: 80px;
     margin-right: 0;
 }
+/***************************/
+.sfLogininfo,.sfNavigation {
+    position: relative;
+    z-index: 101;
+}
 /* Navigation */
-.sf-menu { float:left;}
-.sfNavigation, .sfNavigation li.sfActive a { background:none;float:left;}
+.sf-menu { float:right;}
+.sfNavigation, .sfNavigation li.sfActive a { background:none;}
 .sfNavigation > ul > li > a { border-bottom: 1px solid transparent;}
 .sfNavigation li.sfActive > a { border-bottom:1px solid #797979; position:relative;}
 .sfNavigation li.sfActive > a:after { position: absolute; width:100%; height:1px; content: ""; display: inline-block; left:0; background:#bcbcbc;
 top:100%; margin-top: -3px;}
 .sf-menu a { font-size:16px; text-transform: capitalize; }
 .sf-menu > li > a { padding-left:0; padding-right:0; }
-.sf-menu > li { padding:0 20px; width:100%;}
-/********************/
-#sfHeaders .sfInnerwrapper {
-    background: none;
+.sf-menu > li { padding:0 20px;}
+/* Forms*/
+fieldset {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-.sf-menu a{
-	color:#fff;
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: inherit;
+  color: #333333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
 }
-.sf-menu li.sfActive a {
-    color: #fff;
-	width:100%;
-	float:left;
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+.sfSrcOnly {  
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+} 
+
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 4px 0 0;
+  margin-top: 1px;
+  /* IE8-9 */
+  line-height: normal;
+}
+
+input[type="file"] {
+  display: block;
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+select optgroup {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  height: auto;
+}
+
+.sfInputbox {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555555;
+  vertical-align: middle;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+          transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+input[type="file"] { height:34px; }
+
+.sfInputbox:focus {
+  border-color: #aaa;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.sfInputbox:-moz-placeholder {
+  color: #999999;
+}
+
+.sfInputbox::-moz-placeholder {
+  color: #999999;
+}
+
+.sfInputbox:-ms-input-placeholder {
+  color: #999999;
+}
+
+.sfInputbox::-webkit-input-placeholder {
+  color: #999999;
+}
+
+.sfInputbox[disabled],
+.sfInputbox[readonly] {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+}
+
+textarea.sfInputbox {
+  height: auto;
+}
+.sfFormGroup {  margin-bottom: 15px;}
+.sfFormGroup:after { clear: both; display: table; content: "";}
+.sfFormHorizontal label {  margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 7px; }
+
+/* Input Groups */
+.sfInputGroup {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+}
+
+.sfInputGroup .sfInputbox {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.sfInputGroupAddon,
+.sfInputGroup-btn,
+.sfInputGroup .sfInputbox {
+  display: table-cell;
+}
+
+.sfInputGroupAddon,
+.sfInputGroup-btn {
+  width: 1%;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.sfInputGroupAddon {
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 1px solid #cccccc;
+}
+.sfInputGroupAddon.sfInputPrepend { border-right:none;}
+.sfInputGroupAddon.sfInputAppend { border-left:none;}
+
+
+/* Radio and Checkboxes */
+.sfRadio,
+.sfCheckbox {
+  display: block;
+  min-height: 20px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+}
+
+.sfRadio label,
+.sfCheckbox label {
+  display: inline;
+  margin-bottom: 0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.sfRadio input[type="radio"],
+.sfRadio-inline input[type="radio"],
+.sfCheckbox input[type="checkbox"],
+.sfCheckbox-inline input[type="checkbox"] {
+  float: left;
+  margin-left: -20px;
+}
+
+.sfRadio + .sfRadio,
+.sfCheckbox + .sfCheckbox {
+  margin-top: -5px;
+}
+
+.sfRadio-inline,
+.sfCheckbox-inline {
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: normal;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.sfRadio-inline + .sfRadio-inline,
+.sfCheckbox-inline + .sfCheckbox-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+.sfRadio[disabled],
+.sfRadio-inline[disabled],
+.sfCheckbox[disabled],
+.sfCheckbox-inline[disabled] {
+  cursor: not-allowed;
+}
+
+
+select {
+  background: #fafafa;
+  background-position-x: 97%;
+  background-position-y: center;
+  border: 1px solid #cccccc;
+  padding: 6px 12px;
+  font-size:14px;
+  }
+
+select:hover {
+    background: #f2f2f2;
+    background-position-x: 97%;
+    background-position-y: center;
+    border-color: #999999; }
+/* Table Layout */
+table {
+	max-width: 100%;
+	background-color: transparent;
+	width: 100%;
+	margin-bottom: 20px;
+}
+th {
+	text-align: left;
+}
+table > thead > tr > th, table > tbody > tr > th, table > tfoot > tr > th, table > thead > tr > td, table > tbody > tr > td, table > tfoot > tr > td {
+	padding: 8px;
+	line-height: 1.4;
+	vertical-align: top;
+	border-bottom: 1px solid #dddddd;
+}
+table > thead > tr > th, table > thead > tr > td {
+	vertical-align: bottom;
+	border-bottom: 2px solid #dddddd;
+}
+table > caption + thead > tr:first-child > th, table > colgroup + thead > tr:first-child > th, table > thead:first-child > tr:first-child > th, table > caption + thead > tr:first-child > td, table > colgroup + thead > tr:first-child > td, table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #dddddd;
+}
+table table {
+	background-color: #ffffff;
+}
+
+table.sfTableStriped  tr:nth-child(2n+1) td { background-color:#f7f7f7;}
+/* Pagination */
+
+.sfPagination {
+	margin: 20px 0;
+}
+.sfPagination ul {
+	display: inline-block;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+.sfPagination ul > li {
+	display: inline;
+}
+.sfPagination ul > li > a, .sfPagination ul > li > span {
+	float: left;
+	padding: 4px 12px;
+	line-height: 20px;
+	text-decoration: none;
+	background-color: #ffffff;
+	border: 1px solid #dddddd;
+	border-left-width: 0;
+}
+.sfPagination ul > li > a:hover, .sfPagination ul > li > a:focus, .sfPagination ul > .sfActive > a, .sfPagination ul > .sfActive > span {
+	background-color: #f5f5f5;
+}
+.sfPagination ul > .sfActive > a, .sfPagination ul > .sfActive > span {
+	color: #999999;
+	cursor: default;
+}
+.sfPagination ul > .sfDisabled > span, .sfPagination ul > .sfDisabled > a, .sfPagination ul > .sfDisabled > a:hover, .sfPagination ul > .sfDisabled > a:focus {
+	color: #999999;
+	cursor: default;
+	background-color: transparent;
+}
+.sfPagination ul > li:first-child > a, .sfPagination ul > li:first-child > span {
+	border-left-width: 1px;
 }

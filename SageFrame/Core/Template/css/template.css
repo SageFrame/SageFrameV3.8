@@ -1423,7 +1423,7 @@ h3.sfMediaHeading {
     padding:40px 0;
     position: relative;
     opacity: $opacity;
-	z-index:1;
+	z-index:100;
     
    
 }
@@ -2182,7 +2182,13 @@ a.icon-edit:before, .sfTopbar [class^="icon-"]:before, .sfTopbar [class*=" icon-
 .step [class*="icon-"] {
     font-size: 80px;
     margin-right: 0;
-}/* Navigation */
+}
+/***************************/
+.sfLogininfo,.sfNavigation {
+    position: relative;
+    z-index: 101;
+}
+/* Navigation */
 .sf-menu { float:right;}
 .sfNavigation, .sfNavigation li.sfActive a { background:none;}
 .sfNavigation > ul > li > a { border-bottom: 1px solid transparent;}
