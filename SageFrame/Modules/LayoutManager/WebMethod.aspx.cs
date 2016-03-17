@@ -1324,6 +1324,29 @@ public partial class Modules_LayoutManager_WebMethod : System.Web.UI.Page
     [WebMethod]
     public static void ResetThemeOptions(string TemplateName)
     {
+        string FilePath = string.Empty;
+
+        if (TemplateName == "Default")
+        {
+            FilePath = HttpContext.Current.Server.MapPath("~/Core/Template/css/custom.css");
+
+        }
+        else
+        {
+            FilePath = HttpContext.Current.Server.MapPath("~/Templates/" + TemplateName + "/css/custom.css");
+
+        }
+        if (File.Exists(FilePath))
+        {
+            File.SetAttributes(FilePath, FileAttributes.Normal);
+            File.Delete(FilePath);
+
+        }
+        if (!File.Exists(FilePath))
+        {
+            FileStream CreateFile = File.Create(FilePath);
+            CreateFile.Close();
+        }
         TemplateController obj = new TemplateController();
         obj.ResetThemeOptions(TemplateName);
     }
