@@ -914,38 +914,6 @@ ul {
         width: 1%;
     }
 
-.row {
-    width: 100%;
-    min-height: 500px;
-    margin-bottom: 5px;
-    background-color: #CCC;
-    float: left;
-}
-
-.column {
-    float: left;
-}
-
-.panel {
-    width: 70%;
-    float: left;
-    min-height: 500px;
-    background-color: #1e1e1e;
-    margin-right: 1%;
-}
-
-.body {
-    /*min-height: 500px;*/
-    background-color: cornflowerblue;
-    /*width: 100%;*/
-    /*justify-content:space-around;*/
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: column;
-    color: black;
-}
-
 
 .properties {
     width: 25%;
@@ -1072,7 +1040,7 @@ ol, ul {
     border-color: #2b96dc;
 }
 
-.container {
+.sfContainer {
     background: #fff;
     border: 2px solid #d4d4d4;
     border-radius: 3px;
@@ -1092,11 +1060,11 @@ ol, ul {
    -ms-transition: all 0.3s ease;
    -o-transition: all 0.3s ease; */
 }
-.container.activeDiv{
+.sfContainer.activeDiv{
     border-color: #2b96dc;
 }
 
-    .container.activeDivProperties {
+    .sfContainer.activeDivProperties {
         border-color: #2b96dc;
     }
 
@@ -1817,14 +1785,14 @@ margin-bottom: 20px;
     top: 50%;
 }
 
-.smallDOM .container {
+.smallDOM .sfContainer {
     min-height: 20px !important;
     margin: 0 0 5px;
     padding: 2% 2% 0;
     border: 1px solid #d4d4d4;
 }
 
-    .smallDOM .container .col {
+    .smallDOM .sfContainer .col {
         min-height: 20px !important;
         margin: 0 0 5px;
         padding: 2% 2% 0;
@@ -1854,7 +1822,7 @@ margin-bottom: 20px;
     min-height: auto !important;
 }
 
-#divLayoutWireframe > .container > .container {
+#divLayoutWireframe > .sfContainer > .sfContainer {
     background: none;
     border: none;
     border-radius: 3px;
@@ -1862,7 +1830,7 @@ margin-bottom: 20px;
     margin: 0 !important;
 }
 
-#divLayoutWireframe .container > .sfPosition,
+#divLayoutWireframe .sfContainer > .sfPosition,
 #divLayoutWireframe .col > .sfPosition,
 #divLayoutWireframe .freeContainer > .sfPosition {
     background: #e4effa none repeat scroll 0 0;
@@ -1879,7 +1847,7 @@ margin-bottom: 20px;
     min-height: auto !important;
 }
 
-#divLayoutWireframe .container > .sfPosition {
+#divLayoutWireframe .sfContainer > .sfPosition {
     width: 100%;
     padding: 0 0 5px 0 !important;
 }
@@ -1889,19 +1857,19 @@ margin-bottom: 20px;
     margin-bottom: 10px;
 }
 
-#divLayoutWireframe > .container > .col:first-child {
+#divLayoutWireframe > .sfContainer > .col:first-child {
     padding-left: 0 !important;
 }
 
-#divLayoutWireframe > .container > .col:last-child {
+#divLayoutWireframe > .sfContainer > .col:last-child {
     padding-right: 0 !important;
 }
 
-#divLayoutWireframe > .container > .container:first-child {
+#divLayoutWireframe > .sfContainer > .sfContainer:first-child {
     padding-left: 0 !important;
 }
 
-#divLayoutWireframe > .container > .container:last-child {
+#divLayoutWireframe > .sfContainer > .sfContainer:last-child {
     padding: 0 !important;
 }
 /*******************responsive menu*******************/

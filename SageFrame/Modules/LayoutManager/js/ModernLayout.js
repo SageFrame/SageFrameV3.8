@@ -255,10 +255,10 @@
                     //}
                 });
                 $('#divBodyWrapper').find('#cancelTemplateList').off().on('click', function () {
-                    $('#divBodyWrapper').find('.layout_wrapper').removeClass('margintop0');
                     $('#divBodyWrapper').find('.templateList_wrapper').slideUp(500, function () {
                         $('#divBodyWrapper').find('.templateList_wrapper').removeClass('active');
-                        $('#divBodyWrapper').find('.layout_property').css({ position: 'fixed' }).removeClass('margintop0');                        
+                        $('#divBodyWrapper').find('.layout_property').css({ position: 'fixed' }).removeClass('margintop0');
+                        $('#divBodyWrapper').find('.layout_wrapper').removeClass('margintop0');
                         $('#divBodyWrapper').find('.layout_wrapper').find('.layout_action > ul').css({ 'position': 'fixed' }).addClass('fixed');;
                         $('#divBodyWrapper').find('.layoutBuilder_wrapper').addClass("margintop0");
                     });
@@ -430,7 +430,8 @@
                             }
 
                         });
-                        //runTabifier($('#divBodyWrapper').find('#layoutBuilderDOM').html(), 'HTML', $('#divBodyWrapper').find('#txtlayoutBuilderDOM'));                        
+                        //runTabifier($('#divBodyWrapper').find('#layoutBuilderDOM').html(), 'HTML', $('#divBodyWrapper').find('#txtlayoutBuilderDOM'));
+                        alert(typeof ($('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM')));
                         if ($('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM').length > 0 && typeof ($('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM')) != "undefined") {
                             runTabifier($divBodyWrapper.html(), 'HTML', $('#divBodyWrapper').find('#txtlayoutBuilderParsedDOM'));
                         }
@@ -627,7 +628,7 @@
             },
             containerHTML: function () {
                 containerID++;
-                var container = '<div class="container sfCol_100" data-con="100" data-id="' + containerID + '">' + actionOptions + '</div>';
+                var container = '<div class="sfContainer sfCol_100" data-con="100" data-id="' + containerID + '">' + actionOptions + '</div>';
                 return container;
             },
             containerHTMLFree: function () {
@@ -868,7 +869,7 @@
                             var widthClass = 'col';
                             if (fullWidth > 100) {
                                 width = 100;
-                                widthClass = 'container';
+                                widthClass = 'sfContainer';
                             }
                             else {
                                 width = fullWidth;
@@ -964,7 +965,7 @@
                             var widthClass = 'col';
                             if (fullWidth > 100) {
                                 width = 100;
-                                widthClass = 'container';
+                                widthClass = 'sfContainer';
                             }
                             else {
                                 width = fullWidth;
@@ -1526,48 +1527,42 @@
                 DOMelement = [];
                 containerID = 0;
                 $('#divBodyWrapper').find('#layoutBuilder').find(' > div').each(function () {
-                    if (!$(this).hasClass('container'))
-                        $(this).addClass('container');
+                    if (!$(this).hasClass('sfContainer'))
+                        $(this).addClass('sfContainer');
                 });
                 $('#divBodyWrapper').find('#layoutBuilder').find('div').each(function () {
                     $this = $(this);
-                    var ID = $this.attr('id');
-                    if (typeof (ID) != "undefined") {
-                        $this.prepend(actionOptions);
-                        ModernLayoutManager.showHideSaveButton();
-                        ModernLayoutManager.BindEventOptions();
-                        ModernLayoutManager.MouseOverEffect();
-                        ModernLayoutManager.ResizeableCol();
-                        var classes = $this.attr('class');
-                        var pattern = new RegExp(/sfCol_[0-9]+/);
-                        var isMatched = classes.match(pattern);
-                        var width = 100;
-                        containerID++;
-                        if (isMatched == null) {
-                            $this.addClass('freeContainer');
-                            $this.find('#elemSelect').remove();
-                        }
-                        else {
-                            width = isMatched[0].replace('sfCol_', '');
-                        }
-                        $this.attr('data-id', containerID);
-                        $this.attr('data-con', width);
-                        dataDetail = {};
-                        dataDetail.ID = $this.attr('id');
-                        dataDetail.divClass = $this.attr('class').replace(isMatched, '').replace('col', '').replace('container', '').replace('freeContainer', '').replace('ui-resizable', '');
-                        $this.removeClass(dataDetail.divClass);
-                        dataDetail.dataID = containerID;
-                        dataDetail.name = $this.attr('id');
-                        dataDetail.width = width;
-                        dataDetail.style = $this.attr('style');
-                        $this.removeAttr('style');
-                        $this.find(' > .options').find('.elementSelect').removeClass('disabled');
-                        //widthClass = classes.replace('sfCol_' + width, 'sfCol_' + newWidth);
-                        DOMelement.push(dataDetail);
+                    $this.prepend(actionOptions);
+                    ModernLayoutManager.showHideSaveButton();
+                    ModernLayoutManager.BindEventOptions();
+                    ModernLayoutManager.MouseOverEffect();
+                    ModernLayoutManager.ResizeableCol();
+                    var classes = $this.attr('class');
+                    var pattern = new RegExp(/sfCol_[0-9]+/);
+                    var isMatched = classes.match(pattern);
+                    var width = 100;
+                    containerID++;
+                    if (isMatched == null) {
+                        $this.addClass('freeContainer');
+                        $this.find('#elemSelect').remove();
                     }
                     else {
-                        $this.remove();
+                        width = isMatched[0].replace('sfCol_', '');
                     }
+                    $this.attr('data-id', containerID);
+                    $this.attr('data-con', width);
+                    dataDetail = {};
+                    dataDetail.ID = $this.attr('id');
+                    dataDetail.divClass = $this.attr('class').replace(isMatched, '').replace('col', '').replace('sfContainer', '').replace('freeContainer', '').replace('ui-resizable', '');
+                    $this.removeClass(dataDetail.divClass);
+                    dataDetail.dataID = containerID;
+                    dataDetail.name = $this.attr('id');
+                    dataDetail.width = width;
+                    dataDetail.style = $this.attr('style');
+                    $this.removeAttr('style');
+                    $this.find(' > .options').find('.elementSelect').removeClass('disabled');
+                    //widthClass = classes.replace('sfCol_' + width, 'sfCol_' + newWidth);
+                    DOMelement.push(dataDetail);
                 });
             },
             calculateDOM: function () {
