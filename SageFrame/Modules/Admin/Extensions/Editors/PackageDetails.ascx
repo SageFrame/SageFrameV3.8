@@ -91,7 +91,7 @@
                 <td>
                     <asp:TextBox ID="txtEmail" runat="server" CssClass="sfInputbox" meta:resourcekey="txtEmailResource1"></asp:TextBox>
                     <asp:RegularExpressionValidator ID="revEmail" runat="server" ErrorMessage="Email address is not valid."
-                        CssClass="sfRequired" ControlToValidate="txtEmail" SetFocusOnError="True" ValidationExpression="^[a-zA-Z][a-zA-Z0-9_-]+@[a-zA-Z]+[.]{1}[a-zA-Z]+$"
+                        CssClass="sfRequired" ControlToValidate="txtEmail" SetFocusOnError="True" ValidationExpression="^\w+[\w-\.]*\@\w+((-\w+)|(\w*))\.[a-z]{2,3}$"
                         meta:resourcekey="revEmailResource1"></asp:RegularExpressionValidator>
                 </td>
             </tr>
