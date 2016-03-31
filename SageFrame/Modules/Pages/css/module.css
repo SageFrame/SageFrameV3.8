@@ -253,8 +253,8 @@ font-family: "sageframe" !important;
     -webkit-border-radius: 3px;
     -o-border-radius: 3px;
     -ms-border-radius: 3px;
-	float:left;
-	width:60%;
+	/*float:left;
+	width:60%;*/
 }
 #divLayout.sfNewPage:parent
 {
@@ -269,8 +269,8 @@ font-family: "sageframe" !important;
     -webkit-border-radius: 3px;
     -o-border-radius: 3px;
     -ms-border-radius: 3px;
-	float:left;
-	width:95%;
+	/*float:left;
+	width:95%;*/
 }
 .sfNewPage h3
 {
