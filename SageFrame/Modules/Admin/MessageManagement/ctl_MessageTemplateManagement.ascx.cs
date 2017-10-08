@@ -193,7 +193,7 @@ namespace SageFrame.Modules.Admin.MessageManagement
                     {
                         try
                         {
-                            Int32 MessageTemplateID = Int32.Parse(Session["MessageTemplateID"].ToString());
+                            Int32 MessageTemplateID = Int32.Parse(hdnMessageTemplateID.Value);//Int32.Parse(Session["MessageTemplateID"].ToString());
                             objMsgController.UpdateMessageTemplate(MessageTemplateID, Int32.Parse(ddlMessageTemplateType.SelectedValue), txtSubject.Text,
                                 txtBody.Value, txtMailFrom.Text, chkIsActive.Checked, DateTime.Now, GetPortalID, GetUsername, GetCurrentCultureName);
                             ShowMessage(SageMessageTitle.Information.ToString(), GetSageMessage("MessageManagement", "MessageTemplateIsUpdatedSuccessfully"), "", SageMessageType.Success);
